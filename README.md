@@ -3,7 +3,6 @@
 ## Provided
 
 A json file, containing very little data, and a png of the visual we want this component to use.
-The visual is inspired by one of our sites (http://www.idatastart.com/en/products/product/CMMIXA0/vehicles)
 
 ## Requirements
 
