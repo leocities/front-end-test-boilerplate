@@ -29,7 +29,7 @@ The visual should now show a grey box for the year 2010 next to RLX.
 
 ## Evaluation
 
-This will be evaluated on the compliance to the supplied visual (mockup.png), and the cleanliness of the code and how readable it is. Use this ReactJS project as a boilerplate. This test should take around 2 hours to complete. You will have the opportunity to justify your decisions in person. You may bring it with you to the second interview.
+This will be evaluated on the compliance to the supplied visual (mockup.png), and the cleanliness of the code and how readable it is. Use this ReactJS project as a boilerplate. It will take at least 2 hours, but no more than 4 to complete. You will have the opportunity to justify your decisions in person. You may bring it with you to the second interview.
 
 ## Installation
 
