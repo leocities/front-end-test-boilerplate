@@ -3,13 +3,12 @@
 ## Provided
 
 A json file, containing very little data, and a png of the visual we want this component to use.
-The visual is inspired by one of our sites (http://www.idatastart.com/en/products/product/CMMIXA0/vehicles)
 
 ## Requirements
 
 What we are looking for is a single page "app" that displays years and vehicle models in a grid format.
 We want a grid with the contents of "years" as the header, and "vehicle-models" as the first column.
-On page load, we want the corresponding box to be blue (as in mockup) if the entry for that vehicle model and year exists in the "coverage" segment of the json. And grey if it doesn't exist.
+On page load, we want the corresponding box to be blue (as in the mockup.png) if the entry for that vehicle model and year exists in the "coverage" segment of the json. And grey if it doesn't exist.
 We also want that if we click on a vehicle-model/year box, it is toggled (removes the entry from the javascript "coverage" object if it previously existed or adds it if it did not...) and the visual displays the new state.
 
 Example:
@@ -29,7 +28,7 @@ The visual should now show a grey box for the year 2010 next to RLX.
 
 ## Evaluation
 
-This will be evaluated on the compliance to the supplied visual, and the cleanliness of the code and how readable it is. You will have the opportunity to justify your decisions in person. You may bring it with you to the second interview.
+This will be evaluated on the compliance to the supplied visual (mockup.png), and the cleanliness of the code and how readable it is. Use this ReactJS project as a boilerplate. It will take at least 2 hours, but no more than 4 to complete. You will have the opportunity to justify your decisions in person. You may bring it with you to the second interview.
 
 ## Installation
 
