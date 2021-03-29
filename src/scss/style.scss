@@ -1,1 +1,107 @@
 @import 'base';
+
+$header-height: 288px;
+$rows-and-columns: 44px;
+$space-between: 16px;
+$header-color: #f5f5f5;
+$rows-color: #e4e4e4;
+$covered-color: #0070bd;
+
+%column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@mixin fixed-width($width) {
+    width: $width;
+    flex-shrink: 0;
+}
+
+@mixin fixed-height($height) {
+    height: $height;
+    flex-shrink: 0;
+}
+
+@mixin coverage-column-item($color) {
+    @include fixed-height($rows-and-columns);
+    background-color: $color;
+}
+
+@font-face {
+    font-family: 'dinpro-regular';
+    src: url('../fonts/dinpro-regular.otf');
+}
+
+body {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    background: white;
+    color: black;
+    font-family: 'dinpro-regular';
+}
+
+.coverage-table { @extend %column; }
+.coverage-table-padding-top { @include fixed-height(43px); }
+.coverage-table-padding-left { @include fixed-width(56px); }
+.coverage-table-vspacing { @include fixed-height($space-between); }
+.coverage-table-hspacing { @include fixed-width($space-between); }
+.coverage-table-covered { @include coverage-column-item($covered-color); }
+.coverage-table-uncovered { @include coverage-column-item($rows-color); }
+
+.coverage-table-responsive {
+    display:flex;
+    align-items: stretch;
+}
+
+.coverage-table-models {
+    @extend %column;
+    flex-shrink: 1;
+    width: 840px;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.coverage-table-logo-container {
+    @extend %column;
+    height: $header-height;
+    background-color: $header-color;
+}
+
+.coverage-table-logo-padding-top {
+    flex-basis: 6%;
+}
+
+.coverage-table-logo-background {
+    flex-basis: 91%;
+    width: 90%;
+    margin-left: 5%;
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.coverage-table-model {
+    @include fixed-height($rows-and-columns);
+    background-color: $rows-color;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 200%;
+}
+
+.coverage-table-year-column {
+    @extend %column;
+    width: $rows-and-columns;
+}
+
+.coverage-table-year {
+    @include fixed-height($header-height);
+    background-color: $header-color;
+    box-sizing: border-box;
+    padding: 10px 5px 0 0;
+    font-size: 175%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
